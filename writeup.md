@@ -49,7 +49,7 @@ signs data set:
 
 #### 2. Include an exploratory visualization of the dataset.
 
-Here is an exploratory visualization of the data set. It is a bar chart showing how the data ...
+Here is an exploratory visualization of the data set. It is a bar chart showing how the data is distributed for different classes. It can be seen that some of the classes are less in number. We can increse the number of these classes by data augumentation or just by upsampling the given class randomly.
 
 ![alt text][image1]
 
@@ -57,8 +57,9 @@ Here is an exploratory visualization of the data set. It is a bar chart showing 
 
 #### 1. Describe how you preprocessed the image data. What techniques were chosen and why did you choose these techniques? Consider including images showing the output of each preprocessing technique. Pre-processing refers to techniques such as converting to grayscale, normalization, etc. (OPTIONAL: As described in the "Stand Out Suggestions" part of the rubric, if you generated additional data for training, describe why you decided to generate additional data, how you generated the data, and provide example images of the additional data. Then describe the characteristics of the augmented training set like number of images in the set, number of images for each class, etc.)
 
-I carried out all the preprocessing of the image in the tensorflow graph itself. No extra processing has been done.
-I do not convert the model in grayscale.
+In order to preprocess the image I carry out two kinds of preprocessing.
+First I mormalize all the images by subtracting 128 and dividing by 128. This should normalize the data with 0 mean and unit variance.
+Second the images are converted to grayscale. This helps the model to generalize better and be invariant of different colors in the data.
 
 
 #### 2. Describe what your final model architecture looks like including model type, layers, layer sizes, connectivity, etc.) Consider including a diagram and/or table describing the final model.
